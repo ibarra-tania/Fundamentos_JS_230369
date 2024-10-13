@@ -18,7 +18,7 @@ Previo a iniciar el desarrollo de software para web usando el framework de Node3
 
 
 ### Autor
-Tania Ibarra Salgado
-Unidad 1
-Aplicaciones Web Orientadas a Servicios
+Tania Ibarra Salgado <br>
+Unidad 1 <br>
+Aplicaciones Web Orientadas a Servicios <br>
 Septiembre 2024
