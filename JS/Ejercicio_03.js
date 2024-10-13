@@ -67,17 +67,18 @@ console.table(Producto)
 console.log("Accediendo a propiedades específicas del PRODUCTO")
 console.log(`Nombre Completo del PRODUCTO: ${Producto.Nombre} ${Producto.Marca} ${Producto.Modelo}`)
 console.log(`Precio: ${Producto.Precio}`)
-if(Producto.Disponibilidad == 0)
-console.log(`Estatus: Agotado`)
+
+if(Producto.Disponibilidad === false || Producto.Stock=== 0)
+    console.log(`Estatus: Agotado`)
 else 
-console.log(`Estatus: ${Producto_Stock} unidades disponibles.`);
+    console.log(`Estatus: ${Producto_Stock} unidades disponibles.`);
 
 // Desestructuración de Objetos.
 
 console.log("%c3.- Destructuración de Objetos", style_console);
 
 let Producto2 =
-{   
+{
     Clave: 316,
     Nombre : "Lentes para Sol", 
     Marca: "Oakley",
@@ -95,19 +96,19 @@ let Producto2 =
 let Comprador =
 {
     ID: 3216,
-    Nombre: "Marco",
-    Apellidos: "Ramírez Hernández",
+    Nombre: "Tania",
+    Apellidos: "Ibarra Salgado",
     Tipo: "Frecuente",
-    Correo: "mar.ram@gmail.com",
+    Correo: "tass14x03@gmail.com",
     PaisOrigen: "México",
     SaldoActual: 14000.00
 }
 
 let Pedido= {
     ID:5816,
-    Producto_ID: 316, 
+    Producto_ID: 100,
     Comprador_ID: 3216,
-    Cantidad: 2, 
+    Cantidad: 2,
     Estatus: "Carrito de Compra",
     TipoPago: "Tarjeta de Crédito"
 }
@@ -115,7 +116,7 @@ let Pedido= {
 // En base  a los 3 objetos necesitamos calcular el costo de la compra y si le alcanza con sus saldo a favor
 
 let {Precio: Producto_Precio2 } = Producto2; 
-let {Cantidad:Pedido_Cantidad} = Pedido;
+let {Cantidad: Pedido_Cantidad} = Pedido;
 let {SaldoActual: Cliente_SaldoActual} = Comprador;
 let Costo_Compra= Producto_Precio2 * Pedido_Cantidad;
 
@@ -133,7 +134,7 @@ console.log(JSON.stringify(Producto2, null, 2));
 console.log(`Por cuestiones de inflación el costo del producto ha  cambiado y debe ser actualizado... de $6,829.00 a $6,915.50`)
 // Para podificiar el valor de un objeto basta con igualar el nuevo valor de la proppiedad deseada
 Producto2.Precio=6915.50;
-console.log(`Los nuevos valores del Prodcuto son:  `)
+console.log(`Los nuevos valores del Producto son:  `)
 console.log(Producto2);
 
 // ¿Puedo cambiar no solo el valor , sino el tipo de dato de un Objeto en JavaScript?
@@ -260,7 +261,8 @@ console.table(Pedido);
 // Suponiendo que el usuarios ya realizó el pago el pedido se convertira en una VENTA que requiere información de ambos objetos
 // IMPORTANTE: ASSIGN , no solo permite la fusión de 2 o más objetos, también muta los objetos orginales, perdiendo el valor original del ID en este caso
 let Producto3 = {...Producto}
-const Venta = Object.assign(Producto3, Pedido);
+let Pedido2={...Pedido}
+const Venta = Object.assign(Producto3, Pedido2);
 console.log("Consultamos este nuevo objeto VENTA ")
 console.table(Venta);
 
@@ -279,13 +281,14 @@ const Venta2 =
 {
     producto: {...Producto},
     comprador:{...Comprador},
-    pedido:{...Pedido}
+    Pedido:{...Pedido}
 }
+
 console.log("Fusionamos los 3 objetos en uno nuevo, sin perdida de información")
 console.log(Venta2)
 console.table(Venta2)
 
-
+console.table(Venta2.Pedido)
 
 
 console.log("%c12.- Mutabilidad POST Unión de Objetos", style_console);
@@ -308,4 +311,4 @@ console.log(`Esta el objeto de Pedido Sellado? : ${Object.isSealed(Producto)}` )
 // Modificamos la estructura de producto, agregando una nueva propiedad
 Producto['isLegacy']=false;
 console.log(Producto)
-console.log(Venta2);
+console.table(Venta2);
