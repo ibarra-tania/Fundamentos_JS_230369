@@ -10,7 +10,7 @@ Previo a iniciar el desarrollo de software para web usando el framework de Node3
  |No. |Descripción|Potenciador|Estatus|
  |--|--|--|--|
  |1.|Metodología de Evaluación|1|✅Finalizada|
- |2.| Inicialización del Proyecto de Fundamentos de JS|8|Activa|
+ |2.| Inicialización del Proyecto de Fundamentos de JS|8|✅Finalizada|
 
 
 
