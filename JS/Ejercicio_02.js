@@ -214,7 +214,7 @@ let fecha_ultimoPost;
 nombreUsuario= "tass@gatito.com";
 passUsuario= "Tanñ14.22";
 
-//en este momento de ejecución del sistema no sabemos su género, ni su estatus de relación sentimental. 
+//en este momento de ejecución del sistema no sabemos su género, ni su estatus de relación sentimental.
 
 console.log(`El usuario: ${nombreUsuario} esta intentado logearse con una contraseña de: ${passUsuario}`);
 
@@ -243,3 +243,12 @@ console.log(
 
 
 // 8. FUNCTION (funciones)
+console.warn("--- Tipo de Dato FUNCTION (Función)")
+//Declaramos una función que nos permita recibir un parámetro, en este caso, el nombre de la persona a saludar, y le enviamos un saludo. Esta función la asignamos a una constante.
+const saludar= function(nombre){return `Hola, ${nombre}`}
+
+//Invocamos a la función declarada
+console.log(saludar('Tania'));
+
+//Y que tipo de dato tiene esta constante.
+console.log(`El tipo de dato de la constante saludar es: ${typeof(saludar)}`);
