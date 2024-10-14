@@ -385,6 +385,7 @@ seriesTrending2.forEach((serie, index)=>{
 });
 
 
+console.log("%c12.- Filtrado, transformación y búsqueda de elementos - (.filter(), .map(), .includes())", style_console);
 
 //Usando Filter para filtrar, y map para transformar la información.
 //Lista de series que queremos verificar
