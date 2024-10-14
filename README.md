@@ -15,7 +15,7 @@ Previo a iniciar el desarrollo de software para web usando el framework de Node3
  |4.|Ejercicio 02: Declaración de Variables (Undefined/Boolean/Number/String/BigInt/Symbol/Null/Function)|16|✅Finalizada|
  |5.|Ejercicio 03: Repaso de Objetos|19|✅Finalizada|
  |6.|Ejercicio 04: Repaso de Arreglos|18|✅Finalizada|
-
+ |7.|Ejercicio 05: Repaso de Ciclos y sentencias de control|--|Activo|
 
 
 ### Autor
